@@ -74,7 +74,13 @@ namespace Quanlyvatlieuxaydung
             int kq = da.Update(dt);
             return kq;
         }
-        
 
+        public int updateDataBase2(string sql, DataTable dt)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql, connect);
+            SqlCommandBuilder cB = new SqlCommandBuilder(da);
+            int kq = da.Update(dt);
+            return kq;
+        }
     }
 }
